@@ -1,0 +1,67 @@
+<div class="row mt-4">
+    <div class="col-md-7">
+        {{#if user}}
+        {{#each user}}
+        <div class="card">
+            <div class="card-body">
+                <table style="font-size: medium; font-family: Arial;" class="sc-gPEVay eQYmiW" cellspacing="0"
+                    cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td rowspan="5">
+                                <img src="/images/image1.png" width="198px" height="60px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 style="border: 1px solid transparent; color:darkblue">
+                                    <span>{{this.name}}</span><span>&nbsp;</span><span>{{this.lastname}}</span> | {{this.position}}
+                                </h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.google.com/maps/place/BWA/@11.8586314,-86.2412543,15z/data=!4m5!3m4!1s0x0:0xa7a10b71552daed5!8m2!3d11.8586314!4d-86.2412543"
+                                    style="text-decoration: none; border: 1px solid transparent; line-height: 11px; color:black"><i
+                                        class="far fa-map-marker-alt"></i> 45 Km Pacific Road, Carazo - Nicaragua |</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="+505{{this.phone}}"
+                                    style="border: 1px solid transparent; color:darkblue; text-decoration: none"><i
+                                        class="far fa-mobile"></i> Tel(505) {{this.phone}} |
+                                </a>
+                                <a href="+50575171500"
+                                    style="border: 1px solid transparent; color:darkblue; text-decoration: none; line-height: 11px;">
+                                    <i class="far fa-phone"></i> Tel(505) 75171500</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://b-w-a.com/"
+                                    style="border: 1px solid transparent; color:black; text-decoration: none; line-height: 11px"><i
+                                        class="far fa-globe"></i> www.b-w-a.com | </a>
+                                <a href="mailto:{{this.mail}}"
+                                    style="border: 1px solid transparent; text-decoration: none; color:black; line-height: 11px"><i
+                                        class="far fa-envelope"></i> {{this.mail}}</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br />
+        {{/each}}
+
+        {{else}}
+        <h3 class="text-center">No hay firmas existentes</h3>
+        {{/if}}
+    </div>
+
+    <div class="col-md-5">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="text-center">Formulario Firma</h3>
+                {{>formulario}}
+            </div>
+        </div>
+    </div>
+</div>
